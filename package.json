@@ -1,0 +1,32 @@
+{
+  "name": "blog_api",
+  "version": "1.0.0",
+  "description": "blog api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryrankin/blog_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryrankin/blog_api/issues"
+  },
+  "homepage": "https://github.com/ryrankin/blog_api#readme",
+  "dependencies": {
+    "uuid": "^3.0.1",
+     "body-parser": "^1.15.2",
+     "express": "^4.12.4",
+     "morgan": "^1.7.0"
+  }, 
+  
+  "keywords": [
+    "node",
+    "express",
+    "hyperdev"
+  ]
+
+  }
