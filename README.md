@@ -1,1 +1,1 @@
-README
+This is the Blog API project. You can do all CRUD operations on this app. The only required params for DELETEing or PUTing are "title", "content", "author", and "publishDate".
