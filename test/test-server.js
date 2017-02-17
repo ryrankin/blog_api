@@ -36,7 +36,7 @@ describe('BlogPosts', function(){
 		});
 
 
-	it('should add an item on POST', function(){
+	it('should add blog-post on POST', function(){
 		const newItem = {title: 'blog', content: 'body here', author: 'ryan', publishDate: '05/26/16'};
 		return chai.request(app)
 		.post('/blog-posts')
@@ -53,7 +53,7 @@ describe('BlogPosts', function(){
 	});
 
 
-	it('should update blog item on PUT', function(){
+	it('should update blog-post on PUT', function(){
 		const updateData = {
 			title: 'foo',
 			content: 'bar',
@@ -79,7 +79,7 @@ describe('BlogPosts', function(){
 	});
 
 
-	it('should delete blog item on DELETE', function(){
+	it('should delete blog-post on DELETE', function(){
 		return chai.request(app)
 		.get('/blog-posts')
 		.then(function(res){
