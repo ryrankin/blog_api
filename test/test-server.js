@@ -1,10 +1,13 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
+const {BlogPost} = require('../models');
 const {app, runServer, closeServer} = require('../server');
 const should = chai.should();
 
 chai.use(chaiHttp);
+
+
 
 describe('BlogPosts', function(){
 	
@@ -55,10 +58,13 @@ describe('BlogPosts', function(){
 
 	it('should update blog-post on PUT', function(){
 		const updateData = {
-			title: 'foo',
-			content: 'bar',
-			author: 'me',
-			publishDate: 'date'
+			title: 'foo foo foo',
+			content: 'bar bar bar',
+			author: {
+				firstName: 'foo',
+				lastName: 'bar'
+			}
+			
 		};
 
 		return chai.request(app)
@@ -70,6 +76,7 @@ describe('BlogPosts', function(){
 				.put(`/blog-posts/${updateData.id}`)
 				.send(updateData);
 		})
+
 		.then(function(res){
 			res.should.have.status(200);
 			res.should.be.json;

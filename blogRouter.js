@@ -7,10 +7,9 @@ const jsonParser = bodyParser.json();
 const {BlogPosts} = require('./models');
 
 BlogPosts.create(   
-  '90\'s rock', 'What happened to all the grungle alternative bands of the 90\'s?', 'ryan rankin', '02/15/17',
-'05/26'); 
-BlogPosts.create('Title', 'Content', 'Author', 'Date'); 
-BlogPosts.create('Pittsburgh', 'Steel country', 'Ryan Rankin', '05/26/1989');
+  '90\'s rock', 'What happened to all the grungle alternative bands of the 90\'s?', 'ryan rankin', '02/15/17'); 
+BlogPosts.create('Title', 'Content', 'Author', '01/02/03'); 
+BlogPosts.create('Pittsburgh', 'Steel country', 'Ryan Rankin', '05/26/89');
 
 
 
@@ -20,7 +19,6 @@ router.get('/', (req, res) => {
 
 
 router.post('/', jsonParser, (req, res) => {
-  // ensure `name` and `budget` are in request body
   const requiredFields = ['title', 'content', 'author', 'publishDate'];
   for (let i=0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
@@ -44,7 +42,7 @@ router.delete('/:id', (req, res) => {
 
 
 router.put('/:id', jsonParser, (req, res) => {
-  const requiredFields = ['title', 'content', 'author', 'publishDate'];
+  const requiredFields = ['title', 'content', 'author', 'publishDate', 'id'];
   for (let i=0; i < requiredFields.length; i++){
     const field = requiredFields[i];
     if (!(field in req.body)){
@@ -69,7 +67,7 @@ router.put('/:id', jsonParser, (req, res) => {
     author: req.body.author,
     publishDate: req.body.publishDate
   });
-  res.status(204).json(updatedItem);
+  res.json(updatedItem);
 })
 
 module.exports = router;
