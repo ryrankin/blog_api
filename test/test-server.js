@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
-const {app, runServer, closeServer} = require('../server.js');
+const {app, runServer, closeServer} = require('../server');
 const should = chai.should();
 
 chai.use(chaiHttp);
@@ -70,7 +70,6 @@ describe('BlogPosts', function(){
 				.put(`/blog-posts/${updateData.id}`)
 				.send(updateData);
 		})
-
 		.then(function(res){
 			res.should.have.status(200);
 			res.should.be.json;
