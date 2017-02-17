@@ -38,6 +38,8 @@ describe('BlogPosts', function(){
 			});
 		});
 
+	});
+
 
 	it('should add blog-post on POST', function(){
 		const newItem = {title: 'blog', content: 'this', author: 'ryan', publishDate: '05/26/16'};
