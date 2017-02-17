@@ -40,7 +40,7 @@ describe('BlogPosts', function(){
 
 
 	it('should add blog-post on POST', function(){
-		const newItem = {title: 'blog', content: 'body', author: 'ryan', publishDate: '05/26/16'};
+		const newItem = {title: 'blog', content: 'this', author: 'ryan', publishDate: '05/26/16'};
 		return chai.request(app)
 		.post('/blog-posts')
 		.send(newItem)
