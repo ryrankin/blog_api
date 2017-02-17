@@ -38,7 +38,6 @@ describe('BlogPosts', function(){
 			});
 		});
 
-	});
 
 
 	it('should add blog-post on POST', function(){
@@ -53,7 +52,8 @@ describe('BlogPosts', function(){
 			res.body.should.include.keys('id','title', 'content', 'author', 'publishDate');
 			res.body.id.should.not.be.null;
 
-			res.body.should.be.deep.equal(Object.assign(newItem, {id: res.body.id}));			})
+			res.body.should.be.deep.equal(Object.assign(newItem, {id: res.body.id}));			
+			});
 		});
 	});
 
