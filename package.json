@@ -4,6 +4,7 @@
   "description": "blog api",
   "main": "server.js",
   "scripts": {
+    "sart": "node server.js",
     "test": "mocha"
   },
   "repository": {
@@ -22,7 +23,11 @@
      "express": "^4.12.4",
      "morgan": "^1.7.0"
   }, 
-  
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0"
+  },
   "keywords": [
     "node",
     "express",
