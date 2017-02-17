@@ -7,7 +7,7 @@ const jsonParser = bodyParser.json();
 const {BlogPosts} = require('./models');
 
 BlogPosts.create(   
-  '90\'s rock', 'What happened to all the grungle alternative bands of the 90\'s?', 'ryan rankin', '02/15/17'); 
+  '90\'s rock', 'What happened to the alternative bands of the 90\'s?', 'ryan rankin', '02/15/17'); 
 BlogPosts.create('Title', 'Content', 'Author', '01/02/03'); 
 BlogPosts.create('Pittsburgh', 'Steel country', 'Ryan Rankin', '05/26/89');
 
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 
 router.post('/', jsonParser, (req, res) => {
-  const requiredFields = ['title', 'content', 'author', 'publishDate'];
+  const requiredFields = ['id', 'title', 'content', 'author', 'publishDate'];
   for (let i=0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
@@ -28,7 +28,7 @@ router.post('/', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-  const item = BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.publishDate);
+  const item = BlogPosts.create(req.body.id, req.body.title, req.body.content, req.body.author, req.body.publishDate);
   res.status(201).json(item);
 });
 
