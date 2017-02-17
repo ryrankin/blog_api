@@ -63,7 +63,8 @@ describe('BlogPosts', function(){
 			author: {
 				firstName: 'foo',
 				lastName: 'bar'
-			}
+			},
+			publishDate: '05/26/89'
 			
 		};
 
