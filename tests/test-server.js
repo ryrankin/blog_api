@@ -53,6 +53,43 @@ describe('BlogPosts', function(){
 	});
 
 
+	it('should update blog item on PUT', function(){
+		const updateData = {
+			title: 'foo',
+			content: 'bar',
+			author: 'me',
+			publishDate: 'date'
+		};
 
+		return chai.request(app)
+		.get('/blog-posts')
+		.then(function(res){
+			updateData.id = res.body[0].id;
+
+			return chai.request(app)
+				.put(`/blog-posts/${updateData.id}`)
+				.send(updateData);
+		})
+
+		.then(function(res){
+			res.should.have.status(200);
+			res.should.be.json;
+			res.body.should.be.a('object');
+			res.body.should.deep.equal(updateData);
+		});
+	});
+
+
+	it('should delete blog item on DELETE', function(){
+		return chai.request(app)
+		.get('/blogpost')
+		.then(function(res){
+			return chai.request(app)
+			.delete(`/blog-posts/${res.body[0].id}`);
+		})
+		.then(function(res){
+			res.should.have.status(204);
+		});
+	});
 });
 
