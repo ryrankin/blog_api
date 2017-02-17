@@ -37,6 +37,7 @@ describe('BlogPosts', function(){
 				item.should.include.keys(expectedKeys);
 			});
 		});
+	});
 
 
 
@@ -55,7 +56,6 @@ describe('BlogPosts', function(){
 			res.body.should.be.deep.equal(Object.assign(newItem, {id: res.body.id}));			
 			});
 		});
-	});
 
 
 	it('should update blog-post on PUT', function(){
