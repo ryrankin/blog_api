@@ -2,7 +2,7 @@ language: node_js
 node_js: node
 deploy:
   provider: heroku
-  api_key: 0b071dba-a43b-4941-8b9a-50bb32b8776e
+  api_key:
   app: https://shrouded-oasis-16941.herokuapp.com/
   on:
     repo: ryrankin/blog_api

@@ -40,7 +40,7 @@ describe('BlogPosts', function(){
 
 
 	it('should add blog-post on POST', function(){
-		const newItem = {title: 'blog', content: 'body here', author: 'ryan', publishDate: '05/26/16'};
+		const newItem = {title: 'blog', content: 'body', author: 'ryan', publishDate: '05/26/16'};
 		return chai.request(app)
 		.post('/blog-posts')
 		.send(newItem)
@@ -48,7 +48,7 @@ describe('BlogPosts', function(){
 			res.should.have.status(201);
 			res.should.be.json;
 			res.body.should.be.a('object');
-			res.body.should.include.keys('title', 'content', 'author', 'publishDate');
+			res.body.should.include.keys('id','title', 'content', 'author', 'publishDate');
 			res.body.id.should.not.be.null;
 
 			res.body.should.be.deep.equal(Object.assign(newItem, {id: res.body.id}));			})
