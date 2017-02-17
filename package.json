@@ -4,7 +4,7 @@
   "description": "blog api",
   "main": "server.js",
   "scripts": {
-    "sart": "node server.js",
+    "start": "node server.js",
     "test": "mocha"
   },
   "repository": {
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryrankin/blog_api/issues"
+    "url": "https://github.com/ryrankin/blog_api/"
   },
   "homepage": "https://github.com/ryrankin/blog_api#readme",
   "dependencies": {
