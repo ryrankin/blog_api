@@ -1,7 +1,12 @@
+language: node_js
+node_js: node
 deploy:
   provider: heroku
   api_key:
     secure: FOBf8Q04gljmfoTf9cpymtuTryrD00aix1LZg6Dqe1Z/tZoSqDj+Mn1PiL+TcTjskZmtm7v29HWBSdRX/IVjKaWMM69wTcewXcV23Lvm1ZK5KSa7Q/FjekqMzRLQabrUk+0rcj0+y4lFnmX/aZxyHGgRRrw+6RG73gqm5XEThq2arwkX+qDGtJah/e+tDhUmIy106KaqKZMnZuMinzt96d2XDZg99BJXWonrM4gUJc5M9OLDqISkpfckU7h+aYa2EqD/sywA/PDm6Hlp0hnCS86wMNe38J0113AIeVDWTt2NnroAMvueZnsqkLaQk4etoxo98eqdRSqoIrX6s2Cvx1MOX3STPNNPa0LCJJanh4/BHLANVOAO9vGjEaNe6fUuJ+Z+qD897pZpT3HIbqfOCtFSMShpzZPAcqqqztpmZiRyr4mtPbxYBL3HxXuk+2ymLdoDcWnglQXj1n6N3q6dOlwK+zQihNCChAL8f9et6dS9w/KyYU6n0BcGc2q/4k15hPnyqgaHQGniqPvATBqJVlwSgigA2ha7RlDSoQLbkYFOKU4kO/5WPihuIGJaYMYFDHAOz1xr0xX4tCRgMAgooZkP2w0k9UU3IivTUVcaxx/JPrQoQ3qn+Bl/hjLdOFmk7yeabCzFJI2tAV6Ykgaqyy4b3ip6r6XoaGqEREM6/60=
-  app: shrouded-oasis-16941
+  app: https://shrouded-oasis-16941.herokuapp.com/
   on:
     repo: ryrankin/blog_api
+
+
+
